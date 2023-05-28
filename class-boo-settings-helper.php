@@ -546,6 +546,7 @@ if ( ! class_exists( 'Boo_Settings_Helper' ) ):
 			?>
             <div class="metabox-holder">
 				<?php
+				do_action('before-boo-settings-'.$this->config_menu['slug']);
 				if ( $this->is_tabs ) {
 					$this->show_navigation();
 				}
@@ -577,6 +578,7 @@ if ( ! class_exists( 'Boo_Settings_Helper' ) ):
                     </div>
 
                 </form>
+                <?php do_action('after-boo-settings-'.$this->config_menu['slug']);?>
             </div>
 			<?php
 
